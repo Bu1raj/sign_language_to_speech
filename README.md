@@ -10,7 +10,9 @@ Our project focuses in recognizing signs in real time video feed and convert the
 We have created our own dataset, which cointains 1200 images classified into 10 classes namely 'deaf', 'food', 'hello', 'help', 'iloveyou', 'internet', 'no', 'okay', 'thanks', and 'yes', these classes represent the signs that we detect. Since we used our own and our friends' images we will not be able to upload the dataset due to security reasons.
 
 ### Training Phase
-We chose SSD MobileNet V2 model from the Tensorflow Object Detection API https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md
+We chose SSD MobileNet V2 model ([Download it](http://download.tensorflow.org/models/object_detection/tf2/20200711/ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8.tar.gz)) from the Tensorflow 2 Detection Model Zoo . This model can be trained with minimal GPU requirements, in our case we used a laptop with ** NVDIA GeForce RTX 3050 Ti Laptop GPU ** to train the model.
+
+
 
 
 To run the finished project,
