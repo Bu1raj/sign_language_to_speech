@@ -1,4 +1,4 @@
-# sign_language_to_speech
+# sign_language_to_text
 
 Made with 🖤 by Bhuvanraj T, Kushal J,Mohammed Afzal and Rohith Uppada for summer internship 2023.
 
@@ -17,7 +17,9 @@ We chose SSD MobileNet V2 model ([Download it](http://download.tensorflow.org/mo
 ## What you need to do
 In order to run the model and perform the detection, you can simply download the latest checkpoint from [here](https://github.com/Bu1raj/sign_language_to_speech/tree/main/models/my_ssd_mobilenet_v2_fpnlite_320x320) and then open the [detection_code.iypnb](https://github.com/Bu1raj/sign_language_to_speech/blob/main/detection_code.ipynb) in jupyter notebook/google colab then follow these steps..............
 > [!NOTE] 
-> The following steps might not be required for everyone
+> The following steps might not be required for everyone, but following along will not harm
+1. Install tensorflow using `pip install tensorflow=2.5.0`
+2. Install object-detection package using `pip install objection-detection`
 
 
 
