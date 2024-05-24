@@ -20,6 +20,18 @@ In order to run the model and perform the detection, you can simply download the
 > The following steps might not be required for everyone, but following along will not harm
 1. Install tensorflow using `pip install tensorflow=2.5.0`
 2. Install object-detection package using `pip install objection-detection`
+3. You need to change few paths in the [detection_code.iypnb](https://github.com/Bu1raj/sign_language_to_speech/blob/main/detection_code.ipynb)
+    - ```python
+      configs = config_util.get_configs_from_pipeline_file("Insert the path of the pipeline.config file")
+      ```
+    - ```python
+      ckpt.restore(os.path.join("sign_language_detection_15k\models\my_ssd_mobilenet_v2_fpnlite_320x320", 'ckpt-16')).expect_partial()
+      ```
+      
+6. Run all the cells in the [detection_code.iypnb](https://github.com/Bu1raj/sign_language_to_speech/blob/main/detection_code.ipynb), if you face any problems please refer stackoverflow
+
+## Output and Results
+
 
 
 
