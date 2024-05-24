@@ -19,7 +19,7 @@ In order to run the model and perform the detection, you can simply download the
 1. Latest checkpoint from [here](https://github.com/Bu1raj/sign_language_to_speech/tree/main/models/my_ssd_mobilenet_v2_fpnlite_320x320)
 2. pipeline.config from [here](https://github.com/Bu1raj/sign_language_to_speech/blob/main/models/my_ssd_mobilenet_v2_fpnlite_320x320/pipeline.config)
 3. label_map.pbtxt from [here](https://github.com/Bu1raj/sign_language_to_speech/blob/main/annotations/label_map.pbtxt)
-4. The detection code from [detection_code.iypnb](https://github.com/Bu1raj/sign_language_to_speech/blob/main/detection_code.ipynb)
+4. The detection code from [here](https://github.com/Bu1raj/sign_language_to_speech/blob/main/detection_code.ipynb)
 open the [detection_code.iypnb](https://github.com/Bu1raj/sign_language_to_speech/blob/main/detection_code.ipynb) in jupyter notebook/google colab then follow these steps..............
 
 > [!NOTE] 
