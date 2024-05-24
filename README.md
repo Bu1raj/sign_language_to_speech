@@ -15,20 +15,30 @@ We chose SSD MobileNet V2 model ([Download it](http://download.tensorflow.org/mo
 
 
 ## What you need to do
-In order to run the model and perform the detection, you can simply download the latest checkpoint from [here](https://github.com/Bu1raj/sign_language_to_speech/tree/main/models/my_ssd_mobilenet_v2_fpnlite_320x320) and then open the [detection_code.iypnb](https://github.com/Bu1raj/sign_language_to_speech/blob/main/detection_code.ipynb) in jupyter notebook/google colab then follow these steps..............
+In order to run the model and perform the detection, you can simply download the follwing files and palce in a folder 
+1. Latest checkpoint from [here](https://github.com/Bu1raj/sign_language_to_speech/tree/main/models/my_ssd_mobilenet_v2_fpnlite_320x320)
+2. pipeline.config from [here](https://github.com/Bu1raj/sign_language_to_speech/blob/main/models/my_ssd_mobilenet_v2_fpnlite_320x320/pipeline.config)
+3. label_map.pbtxt from [here](https://github.com/Bu1raj/sign_language_to_speech/blob/main/annotations/label_map.pbtxt)
+4. The detection code from [detection_code.iypnb](https://github.com/Bu1raj/sign_language_to_speech/blob/main/detection_code.ipynb)
+open the [detection_code.iypnb](https://github.com/Bu1raj/sign_language_to_speech/blob/main/detection_code.ipynb) in jupyter notebook/google colab then follow these steps..............
+
 > [!NOTE] 
 > The following steps might not be required for everyone, but following along will not harm
 1. Install tensorflow using `pip install tensorflow=2.5.0`
 2. Install object-detection package using `pip install objection-detection`
 3. You need to change few paths in the [detection_code.iypnb](https://github.com/Bu1raj/sign_language_to_speech/blob/main/detection_code.ipynb)
     - ```python
-      configs = config_util.get_configs_from_pipeline_file('''Insert the path of the pipeline.config file''')
+      configs = config_util.get_configs_from_pipeline_file('''path of the pipeline.config file''')
       ```
     - ```python
       ckpt.restore('''path of the downloaded checkpoint''').expect_partial()
       ```
-      
-6. Run all the cells in the [detection_code.iypnb](https://github.com/Bu1raj/sign_language_to_speech/blob/main/detection_code.ipynb), if you face any problems please refer stackoverflow
+    - ```python
+      category_index = label_map_util.create_category_index_from_labelmap('''path of the label_map.pbtxt''')
+      ```  
+4. Run all the cells in the [detection_code.iypnb](https://github.com/Bu1raj/sign_language_to_speech/blob/main/detection_code.ipynb), you should be able to see a detection window open, this will take several minutes
+
+if you face any erros/problems please refer stackoverflow :upside_down_face: , as we cannot cover all the possible error you might come accross :v:
 
 ## Output and Results
 
