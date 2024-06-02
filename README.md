@@ -40,7 +40,10 @@ open the [detection_code.iypnb](https://github.com/Bu1raj/sign_language_to_speec
 
 if you face any erros/problems please refer stackoverflow :upside_down_face: , as we cannot cover all the possible error you might come accross :v:
 
-This project also leverages NLP (Natural Language Processing) to transform a list of words from the 10 words into coherent and meaningful sentences. To achieve this efficiently, we utilized an API from existing large language models (LLMs), specifically GPT-3.5. By carefully crafting prompts, we guide the LLM to generate meaningful sentences from a given list of words.Initially, we concentrated on a smaller subset of 3 words from the list to form sentences. This approach balances complexity and processing time. Although experimenting with different list sizes and more advanced tweaking of the LLM could potentially enhance efficiency, such improvements may incur higher costs and was'nt worth investing our time in.
+This project also leverages NLP (Natural Language Processing) to transform a list of words from the 10 words into coherent and meaningful sentences. To achieve this efficiently, we utilized an API from existing large language models (LLMs), specifically Gemini. By carefully crafting prompts, we guide the LLM to generate meaningful sentences from a given list of words.Initially, we concentrated on a smaller subset of 3 words from the list to form sentences. This approach balances complexity and processing time. Although experimenting with different list sizes and more advanced tweaking of the LLM could potentially enhance efficiency, such improvements may incur higher costs and was'nt worth investing our time in.
+
+Before running the project, make sure to put your Gemini API key in cell number 4 of detection_code.ipynb. 
+The list of detected words are shown on the terminal as output everytime a new word is detected. Press the Q key on your keyboard to send this list as prompt to Gemini, after which the ouput from the LLM will be displayed in the terminal. 
 
 ## Output and Results
 
