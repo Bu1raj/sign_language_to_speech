@@ -40,10 +40,11 @@ open the [detection_code.iypnb](https://github.com/Bu1raj/sign_language_to_speec
 
 if you face any erros/problems please refer stackoverflow :upside_down_face: , as we cannot cover all the possible error you might come accross :v:
 
+This project also leverages NLP (Natural Language Processing) to transform a list of words from the 10 words into coherent and meaningful sentences. To achieve this efficiently, we utilized an API from existing large language models (LLMs), specifically GPT-3.5. By carefully crafting prompts, we guide the LLM to generate meaningful sentences from a given list of words.Initially, we concentrated on a smaller subset of 3 words from the list to form sentences. This approach balances complexity and processing time. Although experimenting with different list sizes and more advanced tweaking of the LLM could potentially enhance efficiency, such improvements may incur higher costs and was'nt worth investing our time in.
+
 ## Output and Results
 
-
-
+The final demo of the project involved presenting the model in real life secanarios with sub optimal lighting, in which it performed upto our calculated expectations. We managed to obtain meaningful sentences from the detected signs and also encorporated Text- to -Speech capabilites.
 
 
 
