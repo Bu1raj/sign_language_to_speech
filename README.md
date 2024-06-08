@@ -1,7 +1,5 @@
 # sign_language_to_text
 
-Made with 🖤 by Bhuvanraj T, Kushal J,Mohammed Afzal and Rohith Uppada for summer internship 2023.
-
 ## Purpose
 Our project focuses in recognizing signs in real time video feed and convert the detected signs to English sentences. As of now we detect 10 signs only due to limited dataset size(reason for it is discused below), but we can detect more signs as we grow the dataset.
 
