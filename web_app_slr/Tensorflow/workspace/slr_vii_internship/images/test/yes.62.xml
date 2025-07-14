@@ -1,0 +1,26 @@
+<annotation>
+	<folder>yes</folder>
+	<filename>yes.62.jpg</filename>
+	<path>/Users/rohithuppada/Downloads/Rohith/yes/yes.62.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>320</width>
+		<height>320</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Yes</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>83</xmin>
+			<ymin>204</ymin>
+			<xmax>140</xmax>
+			<ymax>258</ymax>
+		</bndbox>
+	</object>
+</annotation>

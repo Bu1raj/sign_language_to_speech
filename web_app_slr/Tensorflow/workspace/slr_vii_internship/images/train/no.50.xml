@@ -1,0 +1,26 @@
+<annotation>
+	<folder>no</folder>
+	<filename>no.50.jpg</filename>
+	<path>D:\sign_language_dataset\image_dataset_320x320\no\no.50.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>320</width>
+		<height>320</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>No</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>190</xmin>
+			<ymin>171</ymin>
+			<xmax>260</xmax>
+			<ymax>284</ymax>
+		</bndbox>
+	</object>
+</annotation>
