@@ -1,0 +1,26 @@
+<annotation>
+	<folder>food</folder>
+	<filename>food.66.jpg</filename>
+	<path>D:\sign_language_dataset\image_dataset_320x320\food\food.66.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>320</width>
+		<height>320</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Food</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>126</xmin>
+			<ymin>189</ymin>
+			<xmax>164</xmax>
+			<ymax>268</ymax>
+		</bndbox>
+	</object>
+</annotation>

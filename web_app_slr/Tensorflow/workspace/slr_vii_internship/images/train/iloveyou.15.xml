@@ -1,0 +1,38 @@
+<annotation>
+	<folder>iloveyou</folder>
+	<filename>iloveyou.15.jpg</filename>
+	<path>D:\jpntbk\image_dataset_320x320\iloveyou\iloveyou.15.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>320</width>
+		<height>320</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Face</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>120</xmin>
+			<ymin>33</ymin>
+			<xmax>202</xmax>
+			<ymax>180</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>I Love You</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>36</xmin>
+			<ymin>153</ymin>
+			<xmax>133</xmax>
+			<ymax>274</ymax>
+		</bndbox>
+	</object>
+</annotation>

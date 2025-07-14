@@ -1,0 +1,26 @@
+<annotation>
+	<folder>okay</folder>
+	<filename>okay.22.jpg</filename>
+	<path>D:\sign_language_dataset\image_dataset_320x320\okay\okay.22.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>320</width>
+		<height>320</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Okay</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>65</xmin>
+			<ymin>112</ymin>
+			<xmax>144</xmax>
+			<ymax>264</ymax>
+		</bndbox>
+	</object>
+</annotation>

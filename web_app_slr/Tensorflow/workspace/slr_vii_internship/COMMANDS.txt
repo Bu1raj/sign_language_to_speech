@@ -1,0 +1,28 @@
+PARTITION DATASET
+python partition_dataset.py -x -i D:\\sign_language_dataset\\Final_320x320_dataset -r 0.1
+____________________________________________________________________________________________________________________________________________________________________
+
+TEST RECORD
+python generate_tfrecord.py -x D:\slr_vii_internship\Tensorflow\workspace\slr_vii_internship\images\train -l D:\slr_vii_internship\Tensorflow\workspace\slr_vii_internship\annotations\label_map.pbtxt -o D:\slr_vii_internship\Tensorflow\workspace\slr_vii_internship\annotations\train.record
+
+____________________________________________________________________________________________________________________________________________________________________
+
+TEST RECORD
+python generate_tfrecord.py -x D:\\slr_vii_internship\\Tensorflow\\workspace\\slr_vii_internship\\images\\test -l D:\\slr_vii_internship\\Tensorflow\\workspace\\slr_vii_internship\\annotations\\label_map.pbtxt -o D:\\slr_vii_internship\\Tensorflow\\workspace\\slr_vii_internship\\annotations\\test.record
+
+__________________________________________________________________________________________________________________________________________________________________
+
+TRAINING COMMAND
+python model_main_tf2.py --model_dir=models\my_ssd_mobilenet_v2_fpnlite_320x320 --pipeline_config_path=models\my_ssd_mobilenet_v2_fpnlite_320x320\pipeline.config
+
+_________________________________________________________________________________________________________________________________________________________________
+
+EVALUATION COMMAND
+python model_main_tf2.py --model_dir=models\my_ssd_mobilenet_v2_fpnlite_320x320 --pipeline_config_path=models\my_ssd_mobilenet_v2_fpnlite_320x320\pipeline.config --checkpoint_dir=models\my_ssd_mobilenet_v2_fpnlite_320x320 
+
+________________________________________________________________________________________________________________________________________________________________________
+
+EXPORTING MODEL
+python .\exporter_main_v2.py --input_type image_tensor --pipeline_config_path .\models\my_ssd_mobilenet_v2_fpnlite_320x320\pipeline.config --trained_checkpoint_dir .\models\my_ssd_mobilenet_v2_fpnlite_320x320\ --output_directory .\exported-models\my_model
+
+
