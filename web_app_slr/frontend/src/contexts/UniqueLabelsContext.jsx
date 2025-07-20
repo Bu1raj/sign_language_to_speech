@@ -32,6 +32,16 @@ export default function UniqueLabelsProvider({ children }) {
     setLoadingUniqueLabels(false);
   }
 
+  // Test function to simulate fetching unique labels
+//   async function fetchUniqueLabels() {
+//   console.log("fetchUniqueLabels called");
+//   setUniqueLabels(["hello", "help","food", "thankyou"]);
+//   setLoadingUniqueLabels(true);
+//   const uniqueLabelsString = ["hello", "help", "food", "thankyou"].join(", ");
+//   console.log("Unique Labels String:", uniqueLabelsString);
+//   await getEnglishText(uniqueLabelsString);
+//   setLoadingUniqueLabels(false);
+// }
   async function getEnglishText (uniqueLabelsString) {
     setSentences({});
     setLoadingSentence(true);
@@ -42,8 +52,9 @@ export default function UniqueLabelsProvider({ children }) {
     }
 
     try {
+      // Get translations for all languages
       const response = await fetch(
-        `https://39ee-34-168-88-45.ngrok-free.app/generateall`,
+        `https://98132240f568.ngrok-free.app/generateall`,
         {
           method: "POST",
           headers: {
@@ -57,12 +68,50 @@ export default function UniqueLabelsProvider({ children }) {
       }
 
       const data = await response.json();
-      setSentences(data.translated);
+      const translations = data.translated;
+
+      // Prepare to store both text and audio URLs
+      const sentencesWithAudio = { ...translations };
+
+      // For each language, request audio and store blob URL
+      for (const [lang, text] of Object.entries(translations)) {
+        try {
+          console.log(`Fetching audio for ${lang}:`, text);
+          const audioRes = await fetch(
+            "https://a1ce1966ead3.ngrok-free.app/generate_wav",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                sample_text: text,
+                language: lang.toLowerCase(),
+                gender: "female",
+                alpha: 1,
+                output_file: "output.wav"
+              })
+            }
+          );
+          if (!audioRes.ok) {
+            throw new Error(`Audio HTTP error! Status: ${audioRes.status}`);
+          }
+          // Get audio as blob
+          const audioBlob = await audioRes.blob();
+          // Create blob URL for playback
+          const audioUrl = URL.createObjectURL(audioBlob);
+          sentencesWithAudio[lang + "_audio"] = audioUrl;
+          console.log(`Audio URL for ${lang}:`, audioUrl);
+        } catch (err) {
+          console.error(`Error fetching audio for ${lang}:`, err);
+        }
+      }
+      setSentences(sentencesWithAudio);
     } catch (error) {
       console.error("Error fetching English text:", error);
     }
     setLoadingSentence(false);
-  };
+  }
 
   const value = {
     loadingUniqueLabels,
@@ -78,5 +127,3 @@ export default function UniqueLabelsProvider({ children }) {
     </UniqueLabelsContext.Provider>
   );
 }
-
-
