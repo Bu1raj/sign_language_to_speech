@@ -42,88 +42,92 @@ export default function UniqueLabelsProvider({ children }) {
 //   await getEnglishText(uniqueLabelsString);
 //   setLoadingUniqueLabels(false);
 // }
-  async function getEnglishText (uniqueLabelsString) {
-    setSentences({});
-    setLoadingSentence(true);
 
-    if(uniqueLabelsString === ""){
-      setLoadingSentence(false);
-      return;
-    }
+let ngrokurl="https://ef6fadc168f0.ngrok-free.app"
+async function getEnglishText(uniqueLabelsString) {
+setSentences({});
+setLoadingSentence(true);
+try {
+  // 1) Get sentence
+  const res = await fetch(ngrokurl+"/generate_sentence", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ words: uniqueLabelsString })
+  });
 
-    try {
-      // Get translations for all languages
-      const response = await fetch(
-        `https://98132240f568.ngrok-free.app/generateall`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ text: uniqueLabelsString }),
-        }
-      );
-      if (!response.ok) { 
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
+  if (!res.ok) throw new Error("Sentence API error");
+  const data = await res.json();
+  const englishSentence = data.sentence;
 
-      const data = await response.json();
-      const translations = data.translated;
+  // 2) Get audio for English sentence
+  const audioRes = await fetch(ngrokurl+"/generate_audio", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ text: englishSentence })
+  });
+  console.log(audioRes)
+  if (!audioRes.ok) throw new Error("Audio API error, Mostly Gemini key is exhausted change the key");
+  const audioBlob = await audioRes.blob();
+  const englishAudioUrl = URL.createObjectURL(audioBlob);
 
-      // Prepare to store both text and audio URLs
-      const sentencesWithAudio = { ...translations };
+  // 3) Save to state
+  setSentences({
+    English: englishSentence,
+    English_audio: englishAudioUrl
+  });
+} catch (err) {
+  console.error("Error generating English text/audio:", err);
+}
 
-      // For each language, request audio and store blob URL
-      for (const [lang, text] of Object.entries(translations)) {
-        try {
-          console.log(`Fetching audio for ${lang}:`, text);
-          const audioRes = await fetch(
-            "https://a1ce1966ead3.ngrok-free.app/generate_wav",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                sample_text: text,
-                language: lang.toLowerCase(),
-                gender: "female",
-                alpha: 1,
-                output_file: "output.wav"
-              })
-            }
-          );
-          if (!audioRes.ok) {
-            throw new Error(`Audio HTTP error! Status: ${audioRes.status}`);
-          }
-          // Get audio as blob
-          const audioBlob = await audioRes.blob();
-          // Create blob URL for playback
-          const audioUrl = URL.createObjectURL(audioBlob);
-          sentencesWithAudio[lang + "_audio"] = audioUrl;
-          console.log(`Audio URL for ${lang}:`, audioUrl);
-        } catch (err) {
-          console.error(`Error fetching audio for ${lang}:`, err);
-        }
-      }
-      setSentences(sentencesWithAudio);
-    } catch (error) {
-      console.error("Error fetching English text:", error);
-    }
-    setLoadingSentence(false);
-  }
+setLoadingSentence(false);
+}
 
-  const value = {
-    loadingUniqueLabels,
-    loadingSentence,
-    uniqueLabels,
-    fetchUniqueLabels,
-    sentences,
-  };
+async function fetchTranslation(lang, englishSentence) {
+try {
+  // 1) Get translation
+  const res = await fetch(ngrokurl+"/translate_sentence", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ sentence: englishSentence, language: lang })
+  });
 
-  return (
-    <UniqueLabelsContext.Provider value={value}>
-      {children}
-    </UniqueLabelsContext.Provider>
-  );
+  if (!res.ok) throw new Error("Translation API error");
+  const data = await res.json();
+  const translatedSentence = data.translated_sentence;
+
+  // 2) Get audio for translated text
+  const audioRes = await fetch(ngrokurl+"/generate_audio", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ text: translatedSentence })
+  });
+
+  const audioBlob = await audioRes.blob();
+  const audioUrl = URL.createObjectURL(audioBlob);
+
+  // 3) Update state (merge)
+  setSentences(prev => ({
+    ...prev,
+    [lang]: translatedSentence,
+    [lang + "_audio"]: audioUrl
+  }));
+} catch (err) {
+  console.error(`Error fetching translation for ${lang}:`, err);
+}
+}
+
+const value = {
+  loadingUniqueLabels,
+  loadingSentence,
+  uniqueLabels,
+  fetchUniqueLabels,
+  sentences,
+  fetchTranslation
+};
+
+return (
+  <UniqueLabelsContext.Provider value={value}>
+    {children}
+  </UniqueLabelsContext.Provider>
+);
 }
