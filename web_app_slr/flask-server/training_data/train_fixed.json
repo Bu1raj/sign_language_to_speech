@@ -1,0 +1,965 @@
+[
+    {
+        "input": "hello deaf",
+        "output": {
+            "text": "Hello, I am deaf.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello help",
+        "output": {
+            "text": "Hello, can you help me?",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "help food",
+        "output": {
+            "text": "I need food, can you help me?",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "deaf help",
+        "output": {
+            "text": "I am deaf and need help.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "food thanks",
+        "output": {
+            "text": "Thanks for the food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "thanks hello",
+        "output": {
+            "text": "Hello, and thank you.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "yes internet",
+        "output": {
+            "text": "Yes, I need internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "internet help",
+        "output": {
+            "text": "I need help with the internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "no help",
+        "output": {
+            "text": "No, I do not need help.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "iloveyou thanks",
+        "output": {
+            "text": "I love you, thank you.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello iloveyou",
+        "output": {
+            "text": "Hello, I love you.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "help deaf",
+        "output": {
+            "text": "Help me, I am deaf.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "okay help",
+        "output": {
+            "text": "Okay, I need help.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "thanks okay",
+        "output": {
+            "text": "Thanks, okay.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "no food",
+        "output": {
+            "text": "No, I do not want food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "yes food",
+        "output": {
+            "text": "Yes, I want food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "internet okay",
+        "output": {
+            "text": "The internet is okay.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "iloveyou internet",
+        "output": {
+            "text": "I love you on the internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello okay",
+        "output": {
+            "text": "Hello, everything is okay.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "food deaf help",
+        "output": {
+            "text": "I am deaf and need help with food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "internet thanks help",
+        "output": {
+            "text": "Thank you for helping me with the internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "yes iloveyou deaf",
+        "output": {
+            "text": "Yes, I love you and I am deaf.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "food no help",
+        "output": {
+            "text": "No, I do not need help with food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello thanks deaf",
+        "output": {
+            "text": "Hello, thank you. I am deaf.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello internet",
+        "output": {
+            "text": "Hello, do you have internet?",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "help yes",
+        "output": {
+            "text": "Yes, I can help you.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "help no",
+        "output": {
+            "text": "No, I cannot help you.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "food okay",
+        "output": {
+            "text": "Food is okay.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello yes",
+        "output": {
+            "text": "Hello, yes.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "deaf okay",
+        "output": {
+            "text": "I am deaf, but it's okay.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "thanks no",
+        "output": {
+            "text": "No, thank you.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "yes iloveyou",
+        "output": {
+            "text": "Yes, I love you.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello food help",
+        "output": {
+            "text": "Hello, I need help with food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "deaf thanks food",
+        "output": {
+            "text": "I am deaf, thank you for the food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "yes okay",
+        "output": {
+            "text": "Yes, it is okay.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello help internet",
+        "output": {
+            "text": "Hello, I need help with the internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "no thanks help",
+        "output": {
+            "text": "No, thank you. I don't need help.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "iloveyou food",
+        "output": {
+            "text": "I love you for the food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "internet no",
+        "output": {
+            "text": "No, I do not need internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "thanks hello help",
+        "output": {
+            "text": "Hello, thank you for your help.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "deaf iloveyou",
+        "output": {
+            "text": "I am deaf, but I love you.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello thanks internet",
+        "output": {
+            "text": "Hello, thank you for the internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "food help thanks",
+        "output": {
+            "text": "Thanks for helping me with the food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello food no",
+        "output": {
+            "text": "Hello, no food is needed.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "internet yes help",
+        "output": {
+            "text": "Yes, I need help with the internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "no okay iloveyou",
+        "output": {
+            "text": "No, it's okay. I love you.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "help deaf food",
+        "output": {
+            "text": "Help me, I am deaf, and I need food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "thanks iloveyou internet",
+        "output": {
+            "text": "Thank you, I love you for the internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "deaf hello yes",
+        "output": {
+            "text": "Hello, yes, I am deaf.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello food internet",
+        "output": {
+            "text": "Hello, do you have food and internet?",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "yes thanks",
+        "output": {
+            "text": "Yes, thank you.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello no help",
+        "output": {
+            "text": "Hello, I don't need help.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "food yes okay",
+        "output": {
+            "text": "Yes, the food is okay.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "iloveyou help food",
+        "output": {
+            "text": "I love you. Please help with food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "deaf no thanks",
+        "output": {
+            "text": "I am deaf, but no, thank you.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello yes food",
+        "output": {
+            "text": "Hello, yes, I need food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "okay internet help",
+        "output": {
+            "text": "Okay, I need help with the internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "thanks no internet",
+        "output": {
+            "text": "Thank you, but I don't need internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "deaf okay thanks",
+        "output": {
+            "text": "I am deaf, but okay, thanks.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "help iloveyou internet",
+        "output": {
+            "text": "I love you. Please help with the internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello help no",
+        "output": {
+            "text": "Hello, I do not need help.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "food deaf thanks",
+        "output": {
+            "text": "Thank you for helping with food. I am deaf.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "internet food yes",
+        "output": {
+            "text": "Yes, I need internet and food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello internet thanks",
+        "output": {
+            "text": "Hello, thank you for the internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "no iloveyou food",
+        "output": {
+            "text": "No, I love you for the food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello okay internet",
+        "output": {
+            "text": "Hello, the internet is okay.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "help thanks food",
+        "output": {
+            "text": "Thank you for helping with the food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "yes hello deaf",
+        "output": {
+            "text": "Yes, hello, I am deaf.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "okay iloveyou help",
+        "output": {
+            "text": "Okay, I love you. Please help me.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "thanks internet food",
+        "output": {
+            "text": "Thank you for the internet and food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "food yes help",
+        "output": {
+            "text": "Yes, I need help with food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "iloveyou no thanks",
+        "output": {
+            "text": "No, thank you. I love you.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello food thanks",
+        "output": {
+            "text": "Hello, thank you for the food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "deaf yes internet",
+        "output": {
+            "text": "Yes, I am deaf and need internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "internet no food",
+        "output": {
+            "text": "No, I don't need food or internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello yes thanks",
+        "output": {
+            "text": "Hello, yes, thank you.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "help food internet",
+        "output": {
+            "text": "I need help with food and internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "thanks iloveyou help",
+        "output": {
+            "text": "Thank you. I love you for your help.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello yes thanks",
+        "output": {
+            "text": "Hello, yes, thank you so much.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "iloveyou internet food",
+        "output": {
+            "text": "I love you. The internet and food are amazing.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello food help",
+        "output": {
+            "text": "Hello, please help with food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "yes deaf food",
+        "output": {
+            "text": "Yes, I am deaf and would like food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "thanks food okay",
+        "output": {
+            "text": "Thanks, the food is okay.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello internet okay",
+        "output": {
+            "text": "Hello, the internet is working fine.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "okay help thanks",
+        "output": {
+            "text": "Okay, thank you for helping me.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "iloveyou food yes",
+        "output": {
+            "text": "I love you. Yes, the food is great.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello yes internet",
+        "output": {
+            "text": "Hello, yes, I need internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "food internet yes",
+        "output": {
+            "text": "Yes, I would like food and internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello thanks iloveyou",
+        "output": {
+            "text": "Hello, thank you. I love you.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "thanks internet okay",
+        "output": {
+            "text": "Thank you, the internet is okay.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "yes internet help",
+        "output": {
+            "text": "Yes, I need help with the internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello help okay",
+        "output": {
+            "text": "Hello, I need help. Everything else is okay.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "food help okay",
+        "output": {
+            "text": "The food is okay, but I need help.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello iloveyou okay",
+        "output": {
+            "text": "Hello, I love you. Everything is okay.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "thanks yes internet",
+        "output": {
+            "text": "Thank you. Yes, I need the internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello yes food",
+        "output": {
+            "text": "Hello, yes, I would like some food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "internet okay yes",
+        "output": {
+            "text": "Yes, the internet is okay.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "thanks yes food",
+        "output": {
+            "text": "Thank you. Yes, I appreciate the food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello help yes",
+        "output": {
+            "text": "Hello, yes, I need help.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "deaf thanks food",
+        "output": {
+            "text": "I am deaf. Thank you for the food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello food thanks",
+        "output": {
+            "text": "Hello, thanks for the food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "yes internet food",
+        "output": {
+            "text": "Yes, I need both food and internet.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello thanks help",
+        "output": {
+            "text": "Hello, thank you for the help.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "iloveyou food thanks",
+        "output": {
+            "text": "I love you. Thank you for the food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "help internet food",
+        "output": {
+            "text": "Please help me with the internet and food.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "hello yes help",
+        "output": {
+            "text": "Hello, yes, I would like some help.",
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "input": "thanks yes iloveyou",
+        "output": {
+            "text": "Thank you. Yes, I love you.",
+            "answer_start": [
+                0
+            ]
+        }
+    }
+]
