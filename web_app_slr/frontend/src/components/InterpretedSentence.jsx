@@ -10,10 +10,34 @@ function Error(){
 export default function InterpretedSentence() {
   const {uniqueLabels, sentences, loadingSentence} = useULC();
   const englishText = sentences["English"];
+
+  function playAudio() {
+  const audioUrl = sentences["English_audio"];
+  if (audioUrl) {
+    new Audio(audioUrl).play();
+  }
+}
+
   return (
     <div className='flex flex-col gap-4'>
-        <h1 className='text-3xl text-slate-300'>Interpreted sentence</h1>
-        {loadingSentence ? <WaveLoader /> : uniqueLabels.length === 0 ? <Error /> : <TextBox text={englishText}/>}
+      <h1 className='text-3xl text-slate-300'>Interpreted sentence</h1>
+      {loadingSentence ? (
+        <WaveLoader />
+      ) : uniqueLabels.length === 0 ? (
+        <Error />
+      ) : (
+        <div className='flex items-center gap-2'>
+          <TextBox text={englishText} />
+          <button
+            className="btn text-xl ml-2 rounded-full"
+            onClick={playAudio}
+            disabled={!englishText}
+            title="Play audio"
+          >
+            🔊
+          </button>
+        </div>
+      )}
     </div>
   )
 }
